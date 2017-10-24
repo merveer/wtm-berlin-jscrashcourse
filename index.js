@@ -1,3 +1,4 @@
+const Database = require('./database');
 const Course = require('./course');
 const Student = require('./student');
 const red = require('ansi-red');
@@ -9,9 +10,10 @@ const firstStudent = new Student('Merve', 29, 'Ankara');
 const secondStudent = new Student('Gulistan', 27, 'London');
 const thirdStudent = new Student('Kubra', 25, 'Istanbul');
 
-firstStudent.makeFriendsWith(secondStudent);
+//firstStudent.makeFriendsWith(secondStudent);
 
 const students = [firstStudent, secondStudent, thirdStudent];
+Database.save(students);
 
 const firstCourse = new Course('JS', 30, 'Armagan');
 const secondCourse = new Course('CSS', 20, 'Yaprak');
@@ -39,4 +41,3 @@ const printName = student => student.sayName();
 students.forEach(printName);
 
 console.log(students[1].friends);
-console.log(firstStudent.friends[0].friends[0]);
