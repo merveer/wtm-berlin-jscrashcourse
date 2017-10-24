@@ -6,14 +6,11 @@ module.exports = class Student {
     this.interests = [];
     this.friends = [];
   }
-
-
   sayName() {
     console.log(`She is ${this.name}`);
   }
-
   makeFriendsWith(student) {
-    this.friends.push(student);
-    student.friends.push(this); // make relationship mutual
+    this.friends.push(student.name);
+    student.friends.push(this.name); // make relationship mutual
   }
 };
