@@ -1,19 +1,9 @@
+const Course = require('./course');
 const Student = require('./student');
 const red = require('ansi-red');
 
 const addAges = (age1, age2) => console.log(age1 + age2);
 const whichCity = (names, cities) => console.log(`${names} is from ${cities}`);
-
-class Course {
-  constructor(subject, hours, instructor) {
-    this.subject = subject;
-    this.hours = hours;
-    this.instructor = instructor;
-  }
-  courseDesc() {
-    console.log(`You will become a ${this.subject} developer`);
-  }
-};
 
 const firstStudent = new Student('Merve', 29, 'Ankara');
 const secondStudent = new Student('Gulistan', 27, 'London');
