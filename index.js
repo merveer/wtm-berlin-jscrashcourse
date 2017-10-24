@@ -1,24 +1,5 @@
+const Student = require('./student');
 const red = require('ansi-red');
-
-class Student {
-  constructor(name, age, city) {
-    this.name = name;
-    this.age = age;
-    this.city = city;
-    this.interests = [];
-    this.friends = [];
-  }
-
-
-  sayName() {
-    console.log(red(`She is ${this.name}`));
-  }
-
-  makeFriendsWith(student) {
-    this.friends.push(student);
-    student.friends.push(this); // make relationship mutual
-  }
-}
 
 const addAges = (age1, age2) => console.log(age1 + age2);
 const whichCity = (names, cities) => console.log(`${names} is from ${cities}`);
@@ -32,7 +13,7 @@ class Course {
   courseDesc() {
     console.log(`You will become a ${this.subject} developer`);
   }
-}
+};
 
 const firstStudent = new Student('Merve', 29, 'Ankara');
 const secondStudent = new Student('Gulistan', 27, 'London');
