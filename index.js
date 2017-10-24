@@ -1,3 +1,5 @@
+const red = require('ansi-red');
+
 class Student {
   constructor(name, age, city) {
     this.name = name;
@@ -9,7 +11,7 @@ class Student {
 
 
   sayName() {
-    console.log(`She is ${this.name}`);
+    console.log(red(`She is ${this.name}`));
   }
 
   makeFriendsWith(student) {
