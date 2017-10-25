@@ -1,7 +1,7 @@
 const Database = require('./database');
 const Course = require('./course');
 const Student = require('./student');
-const red = require('ansi-red');
+//const red = require('ansi-red');
 
 const addAges = (age1, age2) => console.log(age1 + age2);
 const sayCity = (names, cities) => console.log(`${names} is from ${cities}`);
