@@ -4,7 +4,7 @@ const Student = require('./student');
 const red = require('ansi-red');
 
 const addAges = (age1, age2) => console.log(age1 + age2);
-const whichCity = (names, cities) => console.log(`${names} is from ${cities}`);
+const sayCity = (names, cities) => console.log(`${names} is from ${cities}`);
 
 const firstStudent = new Student('Merve', 29, 'Ankara');
 const secondStudent = new Student('Gulistan', 27, 'London');
