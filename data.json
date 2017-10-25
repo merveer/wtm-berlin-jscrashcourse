@@ -1,1 +1,1 @@
-[{"name":"Merve","age":29,"city":"Ankara","interests":[],"friends":[]},{"name":"Gulistan","age":27,"city":"London","interests":[],"friends":[]},{"name":"Kubra","age":25,"city":"Istanbul","interests":[],"friends":[]}]
+[{"name":"Merve","age":29,"city":"Ankara","interests":["Javascript","NodeJS"],"friends":[]},{"name":"Gulistan","age":27,"city":"London","interests":["HTML","MongoDB"],"friends":[]},{"name":"Kubra","age":25,"city":"Istanbul","interests":[],"friends":[]}]
