@@ -45,3 +45,6 @@ Database.save(students);
 
 const loadedFile = Database.load();
 console.log(loadedFile[0].city);
+
+const studentsFromDb = loadedFile.map(Student.create);
+studentsFromDb[0].sayName();

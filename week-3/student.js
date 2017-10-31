@@ -13,4 +13,7 @@ module.exports = class Student {
     this.friends.push(student.name);
     student.friends.push(this.name); // make relationship mutual
   }
+  static create(obj) {
+    return new Student(obj.name, obj.city);
+  }
 };
