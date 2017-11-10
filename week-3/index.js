@@ -1,10 +1,10 @@
 const Database = require('./database');
 const Course = require('./course');
 const Student = require('./student');
-//const red = require('ansi-red');
+// const red = require('ansi-red');
 
-const addAges = (age1, age2) => console.log(age1 + age2);
-const sayCity = (names, cities) => console.log(`${names} is from ${cities}`);
+// const addAges = (age1, age2) => console.log(age1 + age2);
+// const sayCity = (names, cities) => console.log(`${names} is from ${cities}`);
 
 const firstStudent = new Student('Merve', 29, 'Ankara');
 const secondStudent = new Student('Gulistan', 27, 'London');
@@ -14,10 +14,10 @@ const thirdStudent = new Student('Kubra', 25, 'Istanbul');
 
 const students = [firstStudent, secondStudent, thirdStudent];
 
-const firstCourse = new Course('JS', 30, 'Armagan');
-const secondCourse = new Course('CSS', 20, 'Yaprak');
+// const firstCourse = new Course('JS', 30, 'Armagan');
+// const secondCourse = new Course('CSS', 20, 'Yaprak');
 
-const courses = [firstCourse, secondCourse];
+// const courses = [firstCourse, secondCourse];
 
 /* console.log(firstCourse);
 console.log(firstStudent);
@@ -41,10 +41,12 @@ students.forEach(printName); */
 
 // console.log(students[1].friends);
 
-Database.save(students);
+Database.save(students, (err) => {
+  console.log('Your db is now async');
+});
 
-const loadedFile = Database.load();
-console.log(loadedFile[0].city);
+// const loadedFile = Database.load();
+// console.log(loadedFile[0].city);
 
-const studentsFromDb = loadedFile.map(Student.create);
-studentsFromDb[0].sayName();
+// const studentsFromDb = loadedFile.map(Student.create);
+// studentsFromDb[0].sayName();
