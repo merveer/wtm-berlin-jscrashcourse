@@ -7,4 +7,7 @@ module.exports = class Course {
   courseDesc() {
     console.log(`You will become a ${this.subject} developer`);
   }
+  static create(crs) {
+    return new Course(crs.subject, crs.instructor);
+  }
 };

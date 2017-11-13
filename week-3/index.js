@@ -1,3 +1,4 @@
+const CourseDb = require('./course_db');
 const Database = require('./database');
 const Course = require('./course');
 const Student = require('./student');
@@ -14,10 +15,10 @@ const thirdStudent = new Student('Kubra', 25, 'Istanbul');
 
 const students = [firstStudent, secondStudent, thirdStudent];
 
-// const firstCourse = new Course('JS', 30, 'Armagan');
-// const secondCourse = new Course('CSS', 20, 'Yaprak');
+const firstCourse = new Course('JS', 30, 'Armagan');
+const secondCourse = new Course('CSS', 20, 'Yaprak');
 
-// const courses = [firstCourse, secondCourse];
+const courses = [firstCourse, secondCourse];
 
 /* console.log(firstCourse);
 console.log(firstStudent);
@@ -43,6 +44,9 @@ students.forEach(printName); */
 
 Database.save(students, (err) => {
   console.log('Your db is now async');
+});
+CourseDb.save(courses, (err) => {
+  console.log('Your course database is now async');
 });
 
 // const loadedFile = Database.load();

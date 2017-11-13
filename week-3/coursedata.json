@@ -1,0 +1,12 @@
+[
+    {
+        "subject": "JS",
+        "hours": 30,
+        "instructor": "Armagan"
+    },
+    {
+        "subject": "CSS",
+        "hours": 20,
+        "instructor": "Yaprak"
+    }
+]
