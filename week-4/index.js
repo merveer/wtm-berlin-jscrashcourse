@@ -7,8 +7,9 @@ const Student = require('./models/student-model');
 // const red = require('ansi-red');
 const app = express();
 
-app.get('/', async (req, res, next) => {
-  res.send(await StudentService.findAll());
+app.get('/', (req, res, next) => {
+  res.sendFile(`${__dirname  }/index.html`);
+  // res.send(await StudentService.findAll());
 });
 
 app.listen(3000, () => {
