@@ -22,6 +22,7 @@
     "eslint-plugin-import": "^2.7.0"
   },
   "dependencies": {
-    "ansi-red": "^0.1.1"
+    "ansi-red": "^0.1.1",
+    "express": "^4.16.2"
   }
 }

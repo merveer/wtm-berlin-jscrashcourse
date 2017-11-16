@@ -1,8 +1,13 @@
+const express = require('express');
 const CourseDb = require('./course_db');
 const Database = require('./database');
 const Course = require('./course');
 const Student = require('./student');
 // const red = require('ansi-red');
+const app = express();
+app.listen(3000, () => {
+  console.log('Server listening');
+});
 
 // const addAges = (age1, age2) => console.log(age1 + age2);
 // const sayCity = (names, cities) => console.log(`${names} is from ${cities}`);
