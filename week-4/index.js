@@ -1,4 +1,5 @@
 const express = require('express');
+const StudentService = require('./services/student-service');
 const CourseDb = require('./course_db');
 const Database = require('./database');
 const Course = require('./course');
@@ -6,8 +7,8 @@ const Student = require('./models/student-model');
 // const red = require('ansi-red');
 const app = express();
 
-app.get('/', (req, res, next) => {
-  res.send('hello 🎃');
+app.get('/', async (req, res, next) => {
+  res.send(await StudentService.findAll());
 });
 
 app.listen(3000, () => {
