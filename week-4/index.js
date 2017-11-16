@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const StudentService = require('./services/student-service');
 const CourseDb = require('./course_db');
 const Database = require('./database');
@@ -8,6 +9,7 @@ const Student = require('./models/student-model');
 const app = express();
 
 app.set('view engine', 'pug');
+app.use(bodyParser.json());
 
 app.get('/', (req, res, next) => {
   res.render('index');
@@ -16,8 +18,12 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/student/all', async (req, res, next) => {
-  const student = await StudentService.findAll()
+  const student = await StudentService.findAll();
   res.render('student', {student});
+});
+
+app.post('/student', async (req, res, next) => {
+  console.log(req.body);
 });
 
 app.listen(3000, () => {
