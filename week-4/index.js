@@ -2,7 +2,7 @@ const express = require('express');
 const CourseDb = require('./course_db');
 const Database = require('./database');
 const Course = require('./course');
-const Student = require('./student');
+const Student = require('./models/student-model');
 // const red = require('ansi-red');
 const app = express();
 app.listen(3000, () => {
@@ -12,9 +12,9 @@ app.listen(3000, () => {
 // const addAges = (age1, age2) => console.log(age1 + age2);
 // const sayCity = (names, cities) => console.log(`${names} is from ${cities}`);
 
-const firstStudent = new Student('Merve', 29, 'Ankara');
-const secondStudent = new Student('Gulistan', 27, 'London');
-const thirdStudent = new Student('Kubra', 25, 'Istanbul');
+const firstStudent = new Student(0, 'Merve', 29, 'Ankara');
+const secondStudent = new Student(1, 'Gulistan', 27, 'London');
+const thirdStudent = new Student(2, 'Kubra', 25, 'Istanbul');
 
 // firstStudent.makeFriendsWith(secondStudent);
 

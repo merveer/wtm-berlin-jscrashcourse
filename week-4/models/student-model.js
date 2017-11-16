@@ -1,5 +1,6 @@
 module.exports = class Student {
-  constructor(name, age, city) {
+  constructor(id, name, age, city) {
+    this.id = id;
     this.name = name;
     this.age = age;
     this.city = city;
