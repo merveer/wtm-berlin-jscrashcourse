@@ -5,6 +5,11 @@ const Course = require('./course');
 const Student = require('./models/student-model');
 // const red = require('ansi-red');
 const app = express();
+
+app.get('/', (req, res, next) => {
+  res.send('hello 🎃');
+});
+
 app.listen(3000, () => {
   console.log('Server listening');
 });
