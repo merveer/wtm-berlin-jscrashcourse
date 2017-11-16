@@ -23,7 +23,8 @@ app.get('/student/all', async (req, res, next) => {
 });
 
 app.post('/student', async (req, res, next) => {
-  console.log(req.body);
+  const addedStudent = await StudentService.add(req.body);
+  res.send(addedStudent);   //axios.post('/student', {name: "enis"}).then(res => console.log(res.data))
 });
 
 app.listen(3000, () => {
