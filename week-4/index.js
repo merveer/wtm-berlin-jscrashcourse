@@ -41,8 +41,8 @@ console.log(`${secondStudent.name} is from ${secondStudent.city}`); */
 
 // whichCity(firstStudent.name, firstStudent.city);
 
-firstStudent.interests.push('Javascript', 'NodeJS');
-secondStudent.interests.push('HTML', 'MongoDB');
+// firstStudent.interests.push('Javascript', 'NodeJS');
+// secondStudent.interests.push('HTML', 'MongoDB');
 /* console.log(`${firstStudent.name} is interested in ${firstStudent.interests}`); */
 
 // courses[1].courseDesc();
