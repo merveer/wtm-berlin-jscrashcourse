@@ -7,6 +7,8 @@ const Student = require('./models/student-model');
 // const red = require('ansi-red');
 const app = express();
 
+app.set('view engine', 'pug');
+
 app.get('/', (req, res, next) => {
   res.sendFile(`${__dirname  }/index.html`);
   // res.send(await StudentService.findAll());
