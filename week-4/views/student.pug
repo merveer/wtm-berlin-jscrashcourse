@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1 Apprentices of Lonca
+    each person in student
+        p #{person.name}
+            strong #{person.age}

@@ -15,6 +15,11 @@ app.get('/', (req, res, next) => {
   // res.send(await StudentService.findAll());
 });
 
+app.get('/student/all', async (req, res, next) => {
+  const student = await StudentService.findAll()
+  res.render('student', {student});
+});
+
 app.listen(3000, () => {
   console.log('Server listening');
 });
