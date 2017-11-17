@@ -1,9 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const StudentService = require('./services/student-service');
+const CourseService = require('./services/course-service');
 const CourseDb = require('./course_db');
 const Database = require('./database');
-const Course = require('./course');
+const Course = require('./models/course-model');
 const Student = require('./models/student-model');
 // const red = require('ansi-red');
 const app = express();
@@ -22,9 +23,19 @@ app.get('/student/all', async (req, res, next) => {
   res.render('student', {student});
 });
 
+app.get('/course/all', async (req, res, next) => {
+  const course = await CourseService.findAll();
+  res.render('course', {course});
+});
+
 app.post('/student', async (req, res, next) => {
   const addedStudent = await StudentService.add(req.body);
   res.send(addedStudent);   //axios.post('/student', {name: "enis"}).then(res => console.log(res.data))
+});
+
+app.post('/course', async (req, res, next) => {
+  const addedCourse = await CourseService.add(req.body);
+  res.send(addedCourse);   //axios.post('/student', {name: "enis"}).then(res => console.log(res.data))
 });
 
 app.listen(3000, () => {
@@ -42,8 +53,8 @@ const thirdStudent = new Student(2, 'Kubra', 25, 'Istanbul');
 
 const students = [firstStudent, secondStudent, thirdStudent];
 
-const firstCourse = new Course('JS', 30, 'Armagan');
-const secondCourse = new Course('CSS', 20, 'Yaprak');
+const firstCourse = new Course(0, 'JS', 30, 'Armagan');
+const secondCourse = new Course(1, 'CSS', 20, 'Yaprak');
 
 const courses = [firstCourse, secondCourse];
 
