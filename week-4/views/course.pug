@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1 Courses of Lonca
+    each subject in course
+        p #{subject.subject}
+            strong #{subject.instructor}
